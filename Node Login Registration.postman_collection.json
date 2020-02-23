@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "3ae983c0-434d-4dff-a7eb-9efd44edab4d",
+		"name": "Node Login Registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "view user profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODI1NjUzNzQsIm1vYmlsZU5vIjoiOTkzMTAyMTk0OCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTgyNDc4OTc0fQ.pIWKZFbkr5W0ynp72dXKHWLQq72cGOYOxeu2kg8RsRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3003/users/viewprofile",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"users",
+						"viewprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"emailid\":\"emailid\",\n\t\"mobileno\":\"9931021943\",\n\t\"username\":\"Prakash Kumar\",\n\t\"password\":\"1234\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/users/registeruser",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"users",
+						"registeruser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODI1NjUzNzQsIm1vYmlsZU5vIjoiOTkzMTAyMTk0OCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTgyNDc4OTc0fQ.pIWKZFbkr5W0ynp72dXKHWLQq72cGOYOxeu2kg8RsRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"emailId\":\"pkpusa@gmail.com\",\n\t\"userName\":\"Prakash\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/users/updateprofile",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"users",
+						"updateprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"mobileno\":\"9931021948\",\n\t\"password\":\"1234\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3003/users/loginuser",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"users",
+						"loginuser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
