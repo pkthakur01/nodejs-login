@@ -48,10 +48,7 @@ app.use(async function (req, res, next) {
     logger.info(req.path);
     if ((req.path.match("/users/registeruser"))
         || (req.path.match("/users/loginuser"))
-        || (req.path.match("/bikes\/*"))//will be removed later
-        || (req.path.match("/users/getauthtoken\/*"))
-        || (req.path.match("/admin/login"))
-
+        
     ) {
        
         return next();
