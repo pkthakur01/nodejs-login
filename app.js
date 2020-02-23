@@ -48,7 +48,7 @@ app.use(async function (req, res, next) {
     logger.info(req.path);
     if ((req.path.match("/users/registeruser"))
         || (req.path.match("/users/loginuser"))
-        
+
     ) {
        
         return next();
@@ -77,20 +77,6 @@ app.use(async function (req, res, next) {
 
 const users = require("./routes/users.js");
 app.use("/users", users);
-
-// //routes mapping for reatiler
-// const register = require('./routes/register.js');
-// app.use("/registers", register);
-
-
-// app.get('/',function(req,res){ 
-//     res.set({ 
-//         'Access-control-Allow-Origin': '*'
-//         }); 
-//     //return res.redirect("index.html"); 
-//     return res.sendFile(path.join(__dirname + '/index.html'));
-//     })
-
 
 app.get("/", function (req, res) {
     console.log("app starting on port: " + port);
