@@ -1,0 +1,11 @@
+{
+    "host": "localhost",
+    "port": "27017",
+    "testingPort": "27017",
+    "dbName": "reglogin",
+    "authDB": "admin",
+    "username": "admin",
+    "password": "12345",
+    "connString": "mongodb://",
+    "connParams": "authSource=admin"
+}

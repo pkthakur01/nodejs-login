@@ -1,0 +1,6 @@
+node_modules/
+*-lock.json
+*.pem
+.DS_Store
+*.gz
+*.log
